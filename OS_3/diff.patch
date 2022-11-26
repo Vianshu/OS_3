@@ -1,0 +1,11 @@
+210,219d209
+< SYSCALL_DEFINE2(2D_mcpy_syscall, float *, M1, float *, M2){
+< 	float buffer[2][2];
+< 	if (copy_from_user(&buffer,M1, sizeof(buffer))!=0){
+< 		return -EFAULT;
+< 	}
+< 	if (copy_to_user(M2, &buffer, sizeof(buffer))!=0){
+< 		return -EFAULT;
+< 	}
+< 	return 0;
+< }
